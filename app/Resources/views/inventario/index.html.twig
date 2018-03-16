@@ -1,0 +1,9 @@
+{% extends 'baseinv.html.twig' %}
+
+{% block body %}
+
+    <h2>Control de Inventario</h2>
+   
+    {{ sg_datatables_render(inventario) }}
+
+{% endblock %}

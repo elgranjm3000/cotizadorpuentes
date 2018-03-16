@@ -1,4 +1,4 @@
 services:
-#    systemfa.example:
-#        class: SystemfaBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    app.datatable.post:
+        class: SystemfaBundle\Datatables\InventarioDatatable
+        parent: sg_datatables.datatable.abstract

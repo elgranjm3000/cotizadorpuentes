@@ -23,7 +23,7 @@ class DefaultController extends Controller
 
     public function archivoAction()
     {
-    	return new Response('<html><body>Admin page!</body></html>');
+    	return new Response('<html><body>Admin page!11</body></html>');
     	
     }
 }
