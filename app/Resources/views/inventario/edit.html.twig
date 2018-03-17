@@ -1,0 +1,74 @@
+{% extends 'baseinv.html.twig' %}
+
+{% block body %}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+            <h2 class="panel-title">Modificar al Inventario</h2>
+        </div>
+
+    {{ form_start(edit_form) }}
+
+<div class="container-fluid">
+    <div class="row">
+
+<div class="col-md-6">
+         {{ form_row(edit_form.respuesto,{'label':'Nombre del Articulo','attr': {'class': 'form-control','placeholder':'Escriba el nombre del articulo', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Escriba el nombre del articulo'} } ) }}
+
+
+        {{ form_row(edit_form.anno,{'label':'Año','attr': {'class': 'form-control','placeholder':'Ingrese Valor', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Ingrese el Año'} } ) }}
+
+       
+
+          {{ form_row(edit_form.color,{'label':'Color','attr': {'class': 'form-control','placeholder':'Ingrese Color', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Color'} } ) }}
+
+        {{ form_row(edit_form.carpeta,{'label':'Carpeta','attr': {'class': 'form-control','placeholder':'Ingrese Carpeta', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Carpeta'} } ) }}
+
+        {{ form_row(edit_form.etiqueta,{'label':'Etiqueta','attr': {'class': 'form-control','placeholder':'Ingrese Etiqueta', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Etiqueta'} } ) }}
+
+
+        {{ form_row(edit_form.ubicacion,{'label':'Ubicacion','attr': {'class': 'form-control','placeholder':'Ingrese Ubicacion', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Ubicacion'} } ) }}
+
+
+
+        {{ form_row(edit_form.observacion,{'label':'Observacion','attr': {'class': 'form-control','placeholder':'Ingrese Observacion', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Observacion'} } ) }}
+</div>
+<div class="col-md-5">
+
+        {{ form_row(edit_form.precio,{'label':'Precio','attr': {'class': 'form-control','placeholder':'Ingrese Precio', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Precio'} } ) }}
+
+
+
+        {{ form_row(edit_form.expediente,{'label':'Expediente','attr': {'class': 'form-control','placeholder':'Ingrese Expediente', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Expediente'} } ) }}
+
+ 
+        {{ form_row(edit_form.fechaentrada,{'label':'Fecha de Entrada','attr': {'class': 'form-control','placeholder':'Ingrese Fecha de Entrada', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Fecha de Entrada'} } ) }}
+
+
+        {{ form_row(edit_form.fechasalida,{'label':'Fecha de Salida','attr': {'class': 'form-control','placeholder':'Ingrese Fecha de Salida', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Fecha de Salida'} } ) }}
+
+        {{ form_row(edit_form.remito,{'label':'Remito','attr': {'class': 'form-control','placeholder':'Ingrese Remito', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Remito'} } ) }}
+
+        {{ form_row(edit_form.marcarespuesto,{'label':'Marca','attr': {'class': 'form-control','placeholder':'Ingrese Destino', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Marca'} } ) }}
+
+
+        {{ form_row(edit_form.modelorespuesto,{'label':'Modelo','attr': {'class': 'form-control','placeholder':'Ingrese Destino', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Modelo'} } ) }}
+
+         {{ form_row(edit_form.destino,{'label':'Modelo','attr': {'class': 'form-control','placeholder':'Ingrese Destino', 'data-toggle': 'tooltip', 'data-placement':'top' , 'title': 'Destino'} } ) }}
+</div>    
+</div>
+</div>
+      
+
+
+
+        <input type="submit" value="Guardar" class="btn btn-info" />
+    {{ form_end(edit_form) }}
+<br>
+    <ul class="list-inline">
+        <li>
+            <a href="{{ path('inventario_index') }}" class="btn btn-info">Listado</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

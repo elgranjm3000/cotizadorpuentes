@@ -1,0 +1,82 @@
+{% extends 'baseinv.html.twig' %}
+
+{% block body %}
+    <h1>Inventario</h1>
+
+    <table class="table">
+        <tbody>
+            
+            <tr>
+                <th>Respuesto</th>
+                <td>{{ inventario.respuesto }}</td>
+            </tr>
+            
+            <tr>
+                <th>Año</th>
+                <td>{{ inventario.anno }}</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>{{ inventario.color }}</td>
+            </tr>
+            <tr>
+                <th>Carpeta</th>
+                <td>{{ inventario.carpeta }}</td>
+            </tr>
+            <tr>
+                <th>Etiqueta</th>
+                <td>{{ inventario.etiqueta }}</td>
+            </tr>
+            <tr>
+                <th>Ubicacion</th>
+                <td>{{ inventario.ubicacion }}</td>
+            </tr>
+            <tr>
+                <th>Observacion</th>
+                <td>{{ inventario.observacion }}</td>
+            </tr>
+            <tr>
+                <th>Precio</th>
+                <td>{{ inventario.precio }}</td>
+            </tr>
+            <tr>
+                <th>Expediente</th>
+                <td>{{ inventario.expediente }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ inventario.status }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de Entrada</th>
+                <td>{% if inventario.fechaentrada %}{{ inventario.fechaentrada|date('d-m-Y') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fecha de Salida</th>
+                <td>{% if inventario.fechasalida %}{{ inventario.fechasalida|date('d-m-Y') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Remito</th>
+                <td>{{ inventario.remito }}</td>
+            </tr>
+            <tr>
+                <th>Destino</th>
+                <td>{{ inventario.destino }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul class="list-inline">
+        <li>
+            <a class="btn btn-info" href="{{ path('inventario_index') }}">Listado</a>
+        </li>
+        <li>
+            <a class="btn btn-info" href="{{ path('inventario_edit', { 'id': inventario.id }) }}">Editar</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Borrar" class="btn btn-danger">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

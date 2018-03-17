@@ -79,7 +79,7 @@ class InventarioDatatable extends AbstractDatatable
             ->add('modelorespuesto.nombremodelo', Column::class, array(
                 'title' => 'Modelo',
                 ))
-            /*->add(null, ActionColumn::class, array(
+            ->add(null, ActionColumn::class, array(
                 'title' => $this->translator->trans('sg.datatables.actions.title'),
                 'actions' => array(
                     array(
@@ -111,7 +111,7 @@ class InventarioDatatable extends AbstractDatatable
                         ),
                     )
                 )
-            ))*/
+            ))
         ;
     }
 

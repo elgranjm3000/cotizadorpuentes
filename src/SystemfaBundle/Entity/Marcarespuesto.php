@@ -154,4 +154,9 @@ class Marcarespuesto
     {
         return $this->modelorespuesto;
     }
+
+    public function __toString()
+   {
+      return strval($this->getId());
+   }
 }
