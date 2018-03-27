@@ -1,9 +1,52 @@
-{% extends 'baseinv.html.twig' %}
+{#{% extends 'baseinv.html.twig' %}
 
 {% block body %}
 
     <h2>Control de Inventario</h2>
    <a href="{{ path('inventario_new') }}"><i class="fa fa-plus-square"></i>Agregar</a>
     {{ sg_datatables_render(inventario) }}
+
+{% endblock %}#}
+
+{% extends 'plantilla.html.twig' %}
+
+{% block body %}
+
+ 
+
+    <div class="row">
+    <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Control de Inventario</h3>
+            </div>
+            <div class="panel-body">
+   
+{% for flashMenssage in app.session.flashbag.get('add') %}
+<div class="alert alert-success">
+	{{ flashMenssage  }}
+</div>
+{% endfor %}
+
+
+{% for flashMenssage in app.session.flashbag.get('edit') %}
+<div class="alert alert-info">
+	{{ flashMenssage  }}
+</div>
+{% endfor %}
+
+{% for flashMenssage in app.session.flashbag.get('fall') %}
+<div class="alert alert-danger">
+	{{ flashMenssage  }}
+</div>
+{% endfor %}
+  
+    {{ sg_datatables_render(inventario) }}
+
+
+</div>
+</div>
+</div>
+</div>
 
 {% endblock %}

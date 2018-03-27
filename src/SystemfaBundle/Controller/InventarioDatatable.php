@@ -41,7 +41,7 @@ class InventarioDatatable extends AbstractDatatable
         ));
 
         $this->options->set(array(
-            'individual_filtering' => true,
+            
             'individual_filtering_position' => 'head',
             'order_cells_top' => true,
         ));

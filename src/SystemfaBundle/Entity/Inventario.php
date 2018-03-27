@@ -38,7 +38,7 @@ class Inventario
     /**
      * @var string
      *
-     * @ORM\Column(name="respuesto", type="string", length=100)
+     * @ORM\Column(name="respuesto", type="string", length=100,nullable=true)
      */
     private $respuesto;
 
@@ -59,35 +59,35 @@ class Inventario
     /**
      * @var string
      *
-     * @ORM\Column(name="anno", type="string", length=10)
+     * @ORM\Column(name="anno", type="string", length=10,nullable=true)
      */
     private $anno;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="color", type="string", length=60)
+     * @ORM\Column(name="color", type="string", length=60,nullable=true)
      */
     private $color;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="carpeta", type="string", length=10)
+     * @ORM\Column(name="carpeta", type="string", length=10,nullable=true)
      */
     private $carpeta;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="etiqueta", type="string", length=10)
+     * @ORM\Column(name="etiqueta", type="string", length=10,nullable=true)
      */
     private $etiqueta;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ubicacion", type="string", length=255)
+     * @ORM\Column(name="ubicacion", type="string", length=255,nullable=true)
      */
     private $ubicacion;
 
@@ -115,7 +115,7 @@ class Inventario
     /**
      * @var string
      *
-     * @ORM\Column(name="status", type="string", length=1)
+     * @ORM\Column(name="status", type="string", length=1,nullable=true)
      */
     private $status;
 

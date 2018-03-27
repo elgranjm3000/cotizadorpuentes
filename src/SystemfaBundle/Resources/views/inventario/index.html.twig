@@ -1,8 +1,42 @@
-{% extends '::baseinv.html.twig' %}
+{% extends '::plantilla.html.twig' %}
 
-{% block main %}
+{% block body %}
 
-    <h2>Posts</h2>
+ 
+
+    <div class="row">
+    <div class="col-sm-10">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Control de Inventario</h3>
+            </div>
+            <div class="panel-body">
+   
+{% for flashMenssage in app.session.flashbag.get('add') %}
+<div class="alert alert-success">
+	{{ flashMenssage  }}
+</div>
+{% endfor %}
+
+
+{% for flashMenssage in app.session.flashbag.get('edit') %}
+<div class="alert alert-info">
+	{{ flashMenssage  }}
+</div>
+{% endfor %}
+
+{% for flashMenssage in app.session.flashbag.get('fall') %}
+<div class="alert alert-danger">
+	{{ flashMenssage  }}
+</div>
+{% endfor %}
+  
     {{ sg_datatables_render(datatable) }}
+
+
+</div>
+</div>
+</div>
+</div>
 
 {% endblock %}

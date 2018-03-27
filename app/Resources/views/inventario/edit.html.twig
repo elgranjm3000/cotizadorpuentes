@@ -1,7 +1,8 @@
-{% extends 'baseinv.html.twig' %}
+{% extends 'plantilla.html.twig' %}
 
 {% block body %}
 
+<div class="row">
 <div class="panel panel-primary">
     <div class="panel-heading">
             <h2 class="panel-title">Modificar al Inventario</h2>
@@ -70,5 +71,7 @@
             <a href="{{ path('inventario_index') }}" class="btn btn-info">Listado</a>
         </li>
     </ul>
+
+</div>
 </div>
 {% endblock %}

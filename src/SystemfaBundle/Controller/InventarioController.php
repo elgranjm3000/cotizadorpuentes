@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 /**
  * Inventario controller.
  *
@@ -88,7 +89,7 @@ public function indexAction(Request $request)
  *
  * @Route("/{id}", name = "inventario_show", options = {"expose" = true})
  * @Method("GET")
- * @Security("has_role('ROLE_USER')")
+ * @Security("has_role('ROLE_USER') or has_role('ROLE_ADMIN')")
  *
  * @return Response
  */

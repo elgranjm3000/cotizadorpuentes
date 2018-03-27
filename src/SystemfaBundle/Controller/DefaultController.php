@@ -26,4 +26,13 @@ class DefaultController extends Controller
     	return new Response('<html><body>Admin page!11</body></html>');
     	
     }
+
+    /**
+     * @Route("/", name="iniciodetodo")
+     */
+    public function homeAction()
+    {
+        
+            return $this->redirectToRoute('login');         
+    }
 }
